@@ -1,0 +1,15 @@
+<div class="card" my-shadow [color]="'#1976D2'">
+  <img class="card-img-top" [src]="data.image" [alt]="data.name">
+  <div class="card-block">
+    <a [href]="data.imdbUrl">
+      <h4 class="card-title">{{data.name | capitalizeFirst}}</h4>
+    </a>
+  </div>
+  <ul class="list-group list-group-flush" *ngIf="data?.gender">
+    <li class="list-group-item">Genero: {{data.gender}}</li>
+  </ul>
+  <div class="card-block">
+    <a href="#" class="btn btn-primary" (click)="remove()">Eliminar</a>
+    <a [routerLink]="['/edit', data.id ]" class="btn btn-primary">Editar</a>
+  </div>
+</div>

@@ -1,0 +1,7 @@
+<div class="container">
+  <div class="card-deck-wrapper">
+    <div class="card-deck">
+      <film *ngFor="let film of films" [data]="film" (onRemove)="remove($event)"></film>
+    </div>
+  </div>
+</div>
